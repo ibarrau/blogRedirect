@@ -44,6 +44,8 @@
 
 		  gtag('config', 'UA-120636676-1');
 		</script>
+
+		
 	</head>
 	<body>
 
@@ -71,8 +73,12 @@
 					<hr/><br/>
 					
 						File not found - Invalid URL
-						The site is an Argentinian .ar and the URL configured at this address does not contain the requested file.						
-						For root URLs (like http://blog.ladataweb.com/) you must add .ar at the end of the URL.
+						The site is now .com and the URL configured at this address does not contain the requested file with path .com.ar						
+						For root URLs (like http://blog.ladataweb.com.ar/) you must remove .ar at the end of the URL.
+						<br />
+						<br />
+						Try .com -> <a id="path"></a>
+						
 						<br/><br/>
 							<a href="https://blog.ladataweb.com.ar" class="button alt">Go to Blog LaDataWeb</a>							
 						<br/><br/>
@@ -100,11 +106,11 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-			
-			
-			</script>
-			
+		<script>
+			var url = new URL(window.location.href);
+			var path = document.getElementById("path");
+			path.text = "https://blog.ladataweb.com"+url.pathname;
+		</script>
 			
 	</body>
 </html>
